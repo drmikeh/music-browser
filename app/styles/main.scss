@@ -90,3 +90,35 @@ body {
     border-bottom: 0;
   }
 }
+
+
+ul, ol, dl {
+    list-style-type: none;
+}
+
+@mixin color($fg, $bg) {
+  color: $fg;
+  background: $bg;
+  height: 100px;
+  text-align: center;
+  p {
+    font-size: 3em;
+    height: 100%;
+    vertical-align: middle;
+    margin: 15px 0px;
+  }
+}
+
+.red {
+  @include color(white, red);
+}
+.green {
+  @include color(yellow, green);
+}
+.blue {
+  @include color(white, blue);
+}
+.content {
+  height: 100%;
+  display: inline-block;
+}

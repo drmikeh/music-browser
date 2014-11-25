@@ -24,17 +24,22 @@
       <div class="header">
         <ul class="nav nav-pills">
           <li><a class="brand" href="#">ui-router</a></li>
-          <li ng-class="{ active: $state.includes('contacts') }"><a href="#/contacts">Contacts</a></li>
-          <li ng-class="{ active: $state.includes('about') }"><a href="#/about">About</a></li>
+          <li ng-class="{ active: $state.includes('about') }"><a ui-sref="about">About</a></li>
         </ul>
         <p class="navbar-text pull-right" ui-view="hint"></p>
       </div>
 
       <div style="margin-top:60px" ui-view ng-animate="{enter:'fade-enter'}"></div>
       <hr>
+
       <pre>
+        <!-- Here's some values to keep an eye on in the sample in order to
+             understand $state and $stateParams -->
         $state = {{$state.current.name}}
         $stateParams = {{$stateParams}}
+        $state full url = {{ $state.$current.url.source }}
+        <!-- $state.$current is not a public api, we are using it to
+             display the full url for learning purposes -->
       </pre>
 
       <div class="footer">
@@ -90,7 +95,8 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/sidebar.js"></script>
+    <script src="scripts/controllers/home.js"></script>
     <script src="scripts/controllers/about.js"></script>
     <!-- endbuild -->
 </body>
