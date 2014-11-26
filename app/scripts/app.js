@@ -26,7 +26,7 @@ angular
   var home = {
         name: 'home',
         url: '/home',
-        templateUrl: 'views/content.html'
+        templateUrl: 'views/home.html'
     },
     about = {
         name: 'about',
@@ -37,19 +37,19 @@ angular
         name: 'red',
         url: '/red',
         parent: home,
-        templateUrl: 'views/content.red.html'
+        templateUrl: 'views/home.red.html'
     },
     blue = {
         name: 'blue',
         url: '/blue',
         parent: home,
-        templateUrl: 'views/content.blue.html'
+        templateUrl: 'views/home.blue.html'
     },
     green = {
         name: 'green',
         url: '/green',
         parent: home,
-        templateUrl: 'views/content.green.html'
+        templateUrl: 'views/home.green.html'
     };
 
     $stateProvider.state(home);

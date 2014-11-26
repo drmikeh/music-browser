@@ -96,16 +96,28 @@ ul, ol, dl {
     list-style-type: none;
 }
 
+
+.content-view {
+  position: relative;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+
 @mixin color($fg, $bg) {
   color: $fg;
   background: $bg;
   height: 100px;
+  width: 100%;
   text-align: center;
+  padding: 0;
+  margin: 0;
   p {
     font-size: 3em;
-    height: 100%;
     vertical-align: middle;
-    margin: 15px 0px;
+    margin: 0px 0px;
   }
 }
 
@@ -117,8 +129,4 @@ ul, ol, dl {
 }
 .blue {
   @include color(white, blue);
-}
-.content {
-  height: 100%;
-  display: inline-block;
 }

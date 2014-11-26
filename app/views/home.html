@@ -1,3 +1,14 @@
-<div class="jumbotron">
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<div class="row">
+  <h2>This is the header</h2>
+</div>
+
+<div class="row">
+  <div class="col-sm-4" ng-controller="SidebarCtrl">
+    <ul>
+      <li ng-repeat="page in content"> <a ng-click="setPage(page)">goto {{page}}</a></li>
+    </ul>
+  </div>
+  <div class="col-sm-8 content-view">
+    <div class="content" ui-view></div>
+  </div>
 </div>

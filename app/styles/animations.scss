@@ -1,0 +1,43 @@
+@import 'mixins';
+
+$content-animation-duration: 1.0s;
+$animation-duration: 0.5s;
+
+// This works well for ng-repeat
+.content {
+  width: 100%;
+  &.ng-enter, &.ng-leave {
+    position: absolute;
+  }
+  &.ng-enter {
+    animation: fadeInDown $content-animation-duration;
+  }
+  &.ng-leave {
+    animation: fadeOutDown $content-animation-duration;
+  }
+}
+
+/* Have to set height explicity on ui-view
+to prevent collapsing during animation */
+.main-view2 {
+  height: 200px;
+}
+
+.ui-view-container {
+  position: relative;
+}
+
+.main-view {
+  &.ng-enter, &.ng-leave {
+    position: absolute;
+    width: 100%;           // fixes wrapping of text during animation
+    // left: 0;
+    // right: 0;
+  }
+  &.ng-enter {
+    animation: fadeIn $animation-duration;
+  }
+  &.ng-leave {
+    animation: fadeOut $animation-duration;
+  }
+}

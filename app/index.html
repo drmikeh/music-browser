@@ -8,10 +8,12 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
     <!-- endbuild -->
   </head>
   <body ng-app="uiRouterApp">
@@ -23,28 +25,18 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills">
-          <li><a class="brand" href="#">ui-router</a></li>
+          <li><a class="brand" ui-sref="home">My Sample App</a></li>
           <li ng-class="{ active: $state.includes('about') }"><a ui-sref="about">About</a></li>
         </ul>
         <p class="navbar-text pull-right" ui-view="hint"></p>
       </div>
 
-      <div style="margin-top:60px" ui-view ng-animate="{enter:'fade-enter'}"></div>
-      <hr>
-
-      <pre>
-        <!-- Here's some values to keep an eye on in the sample in order to
-             understand $state and $stateParams -->
-        $state = {{$state.current.name}}
-        $stateParams = {{$stateParams}}
-        $state full url = {{ $state.$current.url.source }}
-        <!-- $state.$current is not a public api, we are using it to
-             display the full url for learning purposes -->
-      </pre>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      <div class="row">
+        <div class="col-md-12 ui-view-container">
+          <div class="main-view" ui-view></div>
+        </div>
       </div>
+
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -84,7 +76,6 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
