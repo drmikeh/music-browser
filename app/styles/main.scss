@@ -105,19 +105,24 @@ ul, ol, dl {
   display: inline-block;
 }
 
+@import 'mixins';
 
 @mixin color($fg, $bg) {
+  @include border-radius(10px);
   color: $fg;
   background: $bg;
   height: 100px;
   width: 100%;
   text-align: center;
-  padding: 0;
+  // left: 0;
+  // right: 0;
   margin: 0;
+  padding: 0;
   p {
     font-size: 3em;
     vertical-align: middle;
-    padding: 18px 0px;
+    padding: 18px 0;
+    margin: 0;
   }
 }
 

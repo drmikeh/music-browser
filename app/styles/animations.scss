@@ -6,6 +6,8 @@ $animation-duration: 0.5s;
 // This works well for ng-repeat
 .content {
   width: 100%;
+  margin: 0;
+  padding: 0;
   &.ng-enter, &.ng-leave {
     position: absolute;
   }
@@ -31,8 +33,6 @@ to prevent collapsing during animation */
   &.ng-enter, &.ng-leave {
     position: absolute;
     width: 100%;           // fixes wrapping of text during animation
-    // left: 0;
-    // right: 0;
   }
   &.ng-enter {
     animation: fadeIn $animation-duration;
