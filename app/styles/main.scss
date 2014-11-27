@@ -56,12 +56,12 @@ ul, ol, dl {
 
 @import 'mixins';
 
-@mixin color($fg, $bg, $height) {
+@mixin color($fg, $bg, $width, $height) {
   @include border-radius(10px);
   color: $fg;
   background: $bg;
   height: $height;
-  width: 100%;
+  width: $width;
   text-align: center;
   // left: 0;
   // right: 0;
@@ -78,17 +78,17 @@ ul, ol, dl {
 $color-height: 160px;
 
 .red {
-  @include color(white, red, $color-height);
+  @include color(white, red, 100%, $color-height);
 }
 .green {
-  @include color(yellow, green, $color-height);
+  @include color(yellow, green, 100%, $color-height);
 }
 .blue {
-  @include color(white, #EFEFFF, $color-height);
+  @include color(white, #EFEFFF, 100%, $color-height);
 }
 .light-blue {
-  @include color(DarkBlue, LightBlue, 100px);
+  @include color(DarkBlue, LightBlue, 100%, 100px);
 }
 .dark-blue {
-  @include color(white, DarkBlue, 100px);
+  @include color(white, DarkBlue, 100%, 100px);
 }
