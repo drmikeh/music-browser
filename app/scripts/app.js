@@ -33,6 +33,12 @@ angular
         url: '/about',
         templateUrl: 'views/about.html'
     },
+    green = {
+        name: 'green',
+        url: '/green',
+        parent: home,
+        templateUrl: 'views/home.green.html'
+    },
     red = {
         name: 'red',
         url: '/red',
@@ -45,11 +51,17 @@ angular
         parent: home,
         templateUrl: 'views/home.blue.html'
     },
-    green = {
-        name: 'green',
-        url: '/green',
-        parent: home,
-        templateUrl: 'views/home.green.html'
+    lightBlue = {
+      name: 'lightBlue',
+      url:  '/blue/lightBlue',
+      parent: blue,
+      templateUrl: 'views/home.blue.light.html'
+    },
+    darkBlue = {
+      name: 'darkBlue',
+      url:  '/blue/darkBlue',
+      parent: blue,
+      templateUrl: 'views/home.blue.dark.html'
     };
 
     $stateProvider.state(home);
@@ -57,6 +69,8 @@ angular
     $stateProvider.state(red);
     $stateProvider.state(green);
     $stateProvider.state(blue);
+    $stateProvider.state(lightBlue);
+    $stateProvider.state(darkBlue);
 
     $urlRouterProvider.otherwise('/home');
 
