@@ -6,8 +6,8 @@ $animation-duration: 0.5s;
 // This works well for ng-repeat
 .content {
   width: 100%;
-  margin: 0;
-  padding: 0;
+  // margin: 0;
+  // padding: 0;
   &.ng-enter, &.ng-leave {
     position: absolute;
   }

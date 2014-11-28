@@ -52,13 +52,12 @@ angular
         templateUrl: 'views/home.blue.html'
     },
     lightBlue = {
-      name: 'lightBlue',
+      name: 'blue.lightBlue',
       url:  '/lightBlue',
-      parent: blue,
       templateUrl: 'views/home.blue.light.html'
     },
     darkBlue = {
-      name: 'darkBlue',
+      name: 'blue.darkBlue',
       url:  '/darkBlue',
       parent: blue,
       templateUrl: 'views/home.blue.dark.html'
