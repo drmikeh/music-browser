@@ -1,0 +1,16 @@
+<div>
+  <h1>{{ album.title }}</h1>
+  <table>
+    <tr>
+      <th>Track</th>
+      <th>Title</th>
+      <th>Length</th>
+      <th>Rating</th>
+    </tr>
+    <tr ng-repeat="song in album.songs">
+      <td>{{ song.id }}</td>
+      <td style="text-align: left;">{{ song.title }}</td>
+      <td>{{ song.length }}</td>
+      <td style="width: 120px;">{{ song.rating }}</td>
+    </tr>
+</div>

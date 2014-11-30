@@ -46,7 +46,7 @@ ul, ol, dl {
 }
 
 
-.content-view {
+.artist-view {
   position: relative;
   height: 100%;
   padding: 0;
@@ -91,4 +91,22 @@ $color-height: 160px;
 }
 .dark-blue {
   @include color(white, DarkBlue, 100%, 100px);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #CCC;
+  text-align: center;
+}
+
+th, td {
+    padding: 5px;
+}
+
+th {
+  background-color: blue;
+  color: white;
 }

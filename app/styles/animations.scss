@@ -1,10 +1,10 @@
 @import 'mixins';
 
-$content-animation-duration: 0.5s;
+$artist-animation-duration: 0.5s;
 $animation-duration: 0.5s;
 
 // This works well for ng-repeat
-.content {
+.artist {
   width: 100%;
   // margin: 0;
   // padding: 0;
@@ -12,10 +12,10 @@ $animation-duration: 0.5s;
     position: absolute;
   }
   &.ng-enter {
-    animation: fadeInDown $content-animation-duration;
+    animation: fadeInDown $artist-animation-duration;
   }
   &.ng-leave {
-    animation: fadeOutDown $content-animation-duration;
+    animation: fadeOutDown $artist-animation-duration;
   }
 }
 
