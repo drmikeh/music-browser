@@ -7,10 +7,15 @@ angular.module('uiRouterApp')
 
   that.artists = [];
 
+  that.promise = undefined;
+
   that.getArtists = function() {
-    return $http.get('data/artists.json').success(function(data) {
-      that.artists = data;
-    });
+    if (!that.promise) {
+      that.promise = $http.get('data/artists.json').success(function(data) {
+        that.artists = data;
+      });
+    }
+    return that.promise;
   };
 
   that.getArtistById = function(id) {
