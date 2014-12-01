@@ -1,7 +1,3 @@
 # Advanced Routing with Angular UI Router
-
-## TODO:
-* Add dynamic nested routes (i.e. data driven): 
-    - "/users/{:id}/name"
-    - "/users/{:id}/phone"
-    - "/users/{:id}/address"
+A simple AngularJS single page app using Angular UI Router with nested
+routes that are data driven.
