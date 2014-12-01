@@ -1,9 +1,6 @@
 @import 'mixins';
 
 $artist-animation-duration: 0.5s;
-$animation-duration: 0.5s;
-
-// This works well for ng-repeat
 .artist {
   width: 100%;
   // margin: 0;
@@ -19,6 +16,22 @@ $animation-duration: 0.5s;
   }
 }
 
+$album-animation-duration: 0.35s;
+.album {
+  width: 100%;
+  // margin: 0;
+  // padding: 0;
+  &.ng-enter, &.ng-leave {
+    position: absolute;
+  }
+  &.ng-enter {
+    animation: fadeInDown $album-animation-duration;
+  }
+  &.ng-leave {
+    animation: fadeOutDown $album-animation-duration;
+  }
+}
+
 /* Have to set height explicity on ui-view
 to prevent collapsing during animation */
 .main-view2 {
@@ -29,6 +42,7 @@ to prevent collapsing during animation */
   position: relative;
 }
 
+$animation-duration: 0.5s;
 .main-view {
   &.ng-enter, &.ng-leave {
     position: absolute;

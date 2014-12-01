@@ -20,3 +20,18 @@
      -moz-transform: $the-transform;
           transform: $the-transform;
 }
+
+@mixin animation($inStrategy, $inDuration, $outStrategy, $outDuration) {
+  width: 100%;
+  // margin: 0;
+  // padding: 0;
+  &.ng-enter, &.ng-leave {
+    position: absolute;
+  }
+  &.ng-enter {
+    animation: $inStrategy $inDuration;
+  }
+  &.ng-leave {
+    animation: $outStrategy, $outDuration;
+  }
+}

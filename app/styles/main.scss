@@ -7,6 +7,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 /* Space out content a bit */
 body {
+  margin: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -45,7 +46,6 @@ ul, ol, dl {
   font-size: 1.5em;
 }
 
-
 .artist-view {
   position: relative;
   height: 100%;
@@ -55,43 +55,6 @@ ul, ol, dl {
 }
 
 @import 'mixins';
-
-@mixin color($fg, $bg, $width, $height) {
-  @include border-radius(10px);
-  color: $fg;
-  background: $bg;
-  height: $height;
-  width: $width;
-  text-align: center;
-  left: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  p {
-    font-size: 3em;
-    vertical-align: middle;
-    padding: 15px 0;
-    margin: 0;
-  }
-}
-
-$color-height: 160px;
-
-.red {
-  @include color(white, red, 100%, $color-height);
-}
-.green {
-  @include color(yellow, green, 100%, $color-height);
-}
-.blue {
-  @include color(white, #EFEFFF, 100%, $color-height);
-}
-.light-blue {
-  @include color(DarkBlue, LightBlue, 100%, 100px);
-}
-.dark-blue {
-  @include color(white, DarkBlue, 100%, 100px);
-}
 
 table {
   border-collapse: collapse;
