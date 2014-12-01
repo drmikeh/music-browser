@@ -8,7 +8,7 @@ angular.module('uiRouterApp')
   });
 
   $scope.goArtist = function (artist) {
-    $state.go( 'artists.detail', { id : artist.id } );
+    $state.go( 'artists.detail', { artistId : artist.id } );
   };
 
 });

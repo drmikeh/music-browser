@@ -31,13 +31,13 @@ angular
   },
   artistDetail = {
     name: 'artists.detail',
-    url: '/:id',
+    url: '/:artistId',
     templateUrl: 'views/artist.detail.html',
     controller: 'ArtistDetailCtrl'
   },
   albumDetail = {
     name: 'artists.detail.albumDetails',
-    url: '/:id2',
+    url: '/:albumId',
     templateUrl: 'views/album.html',
     controller: 'AlbumCtrl'
   },
