@@ -32,6 +32,6 @@
     animation: $inStrategy $inDuration;
   }
   &.ng-leave {
-    animation: $outStrategy, $outDuration;
+    animation: $outStrategy $outDuration;
   }
 }
