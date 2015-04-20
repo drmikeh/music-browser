@@ -1,0 +1,50 @@
+* {
+  text-align: center;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.elbow-room {
+  margin: 10px;
+  padding: 10px;
+}
+
+$outer-width:  400px;
+$outer-height: 200px;
+
+.container {
+  @extend .elbow-room;
+  width: $outer-width;
+  height: $outer-height;
+  background-color: lightgray;
+  border: 1px solid black;
+  @include border-radius(20px);
+}
+
+$color-height: $outer-height / 3 - 40px;
+
+.color {
+  @extend .elbow-room;
+  width:  $outer-width - 40px;
+  height: $color-height;
+  @include border-radius(10px);
+  p {
+    margin-top: $color-height / 2 - 10px;
+  }
+}
+
+@mixin color($background, $border) {
+  @extend .color;
+  background-color: $background;
+  border: $border;
+}
+
+.red   { @include color(#ffb3b3,    1px solid red       ); }
+.green { @include color(lightgreen, 1px solid darkgreen ); }
+.blue  { @include color(lightblue,  1px solid darkblue  ); }

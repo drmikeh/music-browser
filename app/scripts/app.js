@@ -52,11 +52,10 @@ angular
   $stateProvider.state(albumDetail);
   $stateProvider.state(about);
 
-  $urlRouterProvider.otherwise('/artists');
-
+  $urlRouterProvider.otherwise('artists');
 })
 .run(function ($rootScope, $state, $stateParams) {
-   $state.transitionTo('artists');
+   $state.go('artists');
 
    // It's very handy to add references to $state and $stateParams to the $rootScope
    // so that you can access them from any scope within your applications.For example,

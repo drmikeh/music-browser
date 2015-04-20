@@ -6,7 +6,7 @@ $artist-animation-duration: 0.5s;
                      fadeOutDown, $artist-animation-duration);
 }
 
-$album-animation-duration: 0.35s;
+$album-animation-duration: 0.5s;
 .album {
   @include animation(fadeInDown,  $album-animation-duration,
                      fadeOutDown, $album-animation-duration);
@@ -16,8 +16,8 @@ $album-animation-duration: 0.35s;
   position: relative;
 }
 
-$animation-duration: 0.5s;
+$animation-duration: 1.0s;
 .main-view {
-  @include animation(fadeIn,  $animation-duration,
-                     fadeOut, $animation-duration);
+  @include animation(bounceInRight,  $animation-duration,
+                     bounceOutDown, $animation-duration);
 }

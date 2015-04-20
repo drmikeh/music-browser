@@ -1,0 +1,48 @@
+* {
+  text-align: center;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin container($width, $height, $background, $border, $radius) {
+  margin: 10px;
+  padding: 10px;
+  width: $width;
+  height: $height;
+  background-color: $background;
+  border: $border;
+  @include border-radius($radius);
+}
+
+$outer-width:  200px;
+$outer-height: 200px;
+
+.container {
+  @include container($outer-width, $outer-height, lightgray, 1px solid black, 20px);
+}
+
+$color-height: $outer-height / 3 - 40px;
+
+@mixin color($foreground, $background, $border) {
+  @include container($outer-width - 40px, $color-height, $background, $border, 10px);
+  p {
+    color: $foreground;
+    margin-top: $color-height / 2 - 10px;
+  }
+}
+
+.red {
+  @include color(complement(red), lighten(red, 35%), 1px solid red);
+}
+.green {
+  @include color(complement(green), lightgreen, 1px solid darkgreen);
+}
+.blue {
+  @include color(complement(blue), lightblue, 1px solid darkblue);
+}
